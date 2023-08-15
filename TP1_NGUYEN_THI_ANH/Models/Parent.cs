@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using KeyAttribute = System.ComponentModel.DataAnnotations.KeyAttribute;
 
+
 namespace TP2.Models
 {
     public class Parent
@@ -12,15 +13,16 @@ namespace TP2.Models
         public int Id { get; set; }
 
 
-        [Display(Name = "Nom de statut")]
+        [DisplayName("NameStatut")]
         [Required(AllowEmptyStrings =false, ErrorMessage = "{0} doit être rempli.")]
         [StringLength(20, MinimumLength = 2, ErrorMessage = "Le champ {0} demande un minimum de {1} et maximum de {2}.")]
         public string Nom { get; set; }
 
-        [Display(Name = "Image")]
-        public string ImageURL { get; set; }
+        [DisplayName("Image")]
+        public string? ImageURL { get; set; }
 
-        [StringLength(1000)]
+        [DisplayName("Description")]
+        [StringLength(1000, ErrorMessage = "{0} doit être rempli.")]
         public string Description { get; set; }
 
         //public List<ParentEnfant> ParentEnfant { get; set; }
@@ -28,8 +30,10 @@ namespace TP2.Models
         //{
         //    Enfants = new List<Enfant>();
         //}
+        [DisplayName("Enfants")]
 
         [ValidateNever]
+
         public virtual List<Enfant>? Enfants { get; set; }
 
     }

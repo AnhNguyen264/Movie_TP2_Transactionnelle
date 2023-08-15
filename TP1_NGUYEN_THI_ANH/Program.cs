@@ -1,14 +1,43 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using System.Globalization;
 using TP2.Models;
 using TP2.Models.Data;
 
 var builder = WebApplication.CreateBuilder(args); // Crée une web app avec les paramètres envoyés
-builder.Services.AddControllersWithViews(); // Permet MVC
+
+
+// Injecter la localisation ICI
+#region Localizer configuration
+CultureInfo[] supportedCultures = new[]
+{
+    new CultureInfo("en-US"),
+    new CultureInfo("fr-CA")
+};
+#endregion
+
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+builder.Services.AddControllersWithViews()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization();
+
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+});
+
 builder.Services.AddRazorPages(); // Permet utilisation de Razor
 
 builder.Services.AddDbContext<TPDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+//options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")).UseLazyLoadingProxies());
+
 
 
 builder.Services.AddSingleton<BaseDonnees>(); // Permet l'utilisation du Singleton
@@ -18,6 +47,10 @@ builder.Services.AddSession(option => { option.IdleTimeout = TimeSpan.FromMinute
 
 
 var app = builder.Build();
+
+var locOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
+app.UseRequestLocalization(locOptions.Value);
+
 
 if (app.Environment.IsDevelopment())
 {

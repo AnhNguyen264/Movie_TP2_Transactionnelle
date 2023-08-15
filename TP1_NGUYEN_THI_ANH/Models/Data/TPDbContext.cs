@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography.X509Certificates;
 
+
+
 namespace TP2.Models.Data
 {
     public class TPDbContext: DbContext

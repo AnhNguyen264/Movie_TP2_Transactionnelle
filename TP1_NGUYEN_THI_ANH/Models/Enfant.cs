@@ -14,33 +14,33 @@ namespace TP2.Models
         [Key]
         public int Id { get; set; }
 
-        [Display(Name = "Nom de statut")]
+        [DisplayName("NameParent")]
         [ForeignKey("Parent")]
         public int IdParent { get; set; }
 
-        [Display(Name = "Nom de film")]
+        [DisplayName("NameMovie")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "{0} doit être rempli.")]
         [StringLength(20, MinimumLength = 2, ErrorMessage = "Le champ {0} demande un minimum de {1} et maximum de {2}.")]
         public string Nom { get; set; }
 
-        [Display(Name = "Image")]
+        [DisplayName("Image")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "{0} doit être rempli.")]
         public string ImageURL { get; set; }
 
 
-        [Display(Name = "Genre de film")]
+        [DisplayName("TypeMovie")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "{0} doit être rempli.")]
         public string GenreDeFilm { get; set; }
 
 
-        [Display(Name = "Date de sortie du film")]
+        [DisplayName("Date")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "{0} doit être rempli.")]
         public int Date { get; set; }
 
-        [Display(Name = "Les vues")] 
+        [DisplayName("View")] 
         public int Vus { get; set; }
 
-        [Display(Name = "Description")]
+        [DisplayName("Description")]
         [StringLength(1000)]
         [Required(AllowEmptyStrings = false, ErrorMessage = "{0} doit être rempli.")]
         public string Description { get; set; }
