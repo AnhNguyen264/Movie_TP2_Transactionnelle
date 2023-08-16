@@ -1,0 +1,10 @@
+﻿@inject IViewLocalizer Localizer
+
+@{
+    //ViewData["Title"] = ViewBag.Title;
+    ViewData["titre"] = @Locals["Title"];
+
+}
+<h1>@Localizer["PrivacyTitle"]</h1>
+
+<p>@Localizer["PrivacyDescription"]</p>

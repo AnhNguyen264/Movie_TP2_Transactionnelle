@@ -26,7 +26,7 @@
 
                     <form  asp-controller="Favoris" asp-action="AjoutUnEnfant" method="POST">
                         <input type="hidden" name="id" value="@Model.Id" />
-                        <button type="submit"> <i class="fa-sharp fa-solid fa-heart"></i> Ajouter aux favoris</button>
+                        <button type="submit"> <i class="fa-sharp fa-solid fa-heart"></i> @Locals["AddFavourtie"]</button>
                     </form>
 
 
@@ -43,7 +43,11 @@
                     <a href="https://www.youtube.com/watch?v=eoOaKN4qCKw">
                         <i class="fa-solid fa-play"></i>
                     </a>
-                    <span>Regardez-maintenant</span>
+                    <span>@Locals["Watch"]</span>
+                </div>
+
+                <div class="col">
+                    <a asp-action="Index" class="btn btn-secondary "><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;@Locals["BackToList"]</a>
                 </div>
             </div>
 

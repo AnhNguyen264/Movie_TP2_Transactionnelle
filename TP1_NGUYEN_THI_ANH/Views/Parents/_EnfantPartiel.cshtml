@@ -10,14 +10,14 @@
             <p>@Model.Description</p>
         </div>
         <div class="btn_plus_detail">
-            <a href="/enfant/detail/@Model.Id"><button class="btn button_todetail">Plus details</button></a>
+            <a href="/enfant/detail/@Model.Id"><button class="btn button_todetail">@Locals["MoreDetail"]</button></a>
           
 
             <a class="btn btn-info mx-2" asp-action="Edit" asp-route-Id="@Model.Id">
-                <i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;Modifier
+                <i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;@Locals["Edit"]
             </a>
             <a class="btn btn-danger mx-2" asp-action="Delete" asp-route-Id="@Model.Id">
-                <i class="fa-solid fa-trash"></i>&nbsp;&nbsp;Supprimer
+                <i class="fa-solid fa-trash"></i>&nbsp;&nbsp;@Locals["Delete"]
             </a>
 
 

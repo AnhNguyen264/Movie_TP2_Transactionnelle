@@ -1,6 +1,11 @@
 ﻿@model Parent
 
-<partial name="_bannerPartiel" />
+@{
+    ViewData["titre"] = @Locals["Title"];
+}
+
+<h1>@Locals["Title"] </h1>
+
 <div class="list-statut">
 
     <div class="container text-center">
@@ -24,7 +29,7 @@
                 </p>
 
                 <div class="col-sm-12 button_retour" style="margin-top:20px">
-                    <a asp-controller="GestionEnfant" asp-action="Create" class="btn button_retour_a">Ajouter un film</a>
+                    <a asp-controller="GestionEnfant" asp-action="Create" class="btn button_retour_a">@Locals["AddFilm"]</a>
                 </div>
 
             </div>
@@ -45,7 +50,7 @@
 
 
                     <a href="~/GestionEnfant/Delete/@(item.Id)">
-                        <button class="button_delete btn btn-danger" type="submit">Supprimer</button>
+                        <button class="button_delete btn btn-danger" type="submit">@Locals["Delete"]</button>
                     </a>
 
 
@@ -56,7 +61,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 button_retour" style="margin-top:20px">
-                <a asp-action="index" class="btn button_retour_a">Retour à la liste</a>
+                <a asp-action="index" class="btn button_retour_a">@Locals["BackToList"]</a>
             </div>
         </div>
 

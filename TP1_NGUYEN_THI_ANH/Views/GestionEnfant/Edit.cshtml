@@ -1,8 +1,11 @@
 ﻿@model EnfantVM
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["titre"] = @Locals["Title"];
+
 }
-<h1>Edit</h1>
+<h1>
+  @Locals["Title"];
+</h1>
 <h4>Zombie</h4>
 <hr />
 <div class="row">

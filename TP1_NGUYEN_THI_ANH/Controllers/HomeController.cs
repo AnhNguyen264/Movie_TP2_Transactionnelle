@@ -30,10 +30,15 @@ namespace TP2.Controllers
         public IActionResult Index()
         {
             //ViewData["titre"] = "Acceuil";
+            ViewData["Title"] = this._localizer["HomeIndexTitle"];
             return View(_baseDonnees.Parents.ToList());
         }
 
-       
+        public IActionResult Privacy()
+        {
+            ViewBag.Title = _localizer["PrivacyTitle"];
+            return View();
+        }
 
         public IActionResult Consulter(int id)
         {

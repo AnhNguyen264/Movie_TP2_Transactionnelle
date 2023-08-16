@@ -1,17 +1,18 @@
 ﻿@model List<Enfant>
 @{
-    ViewData["titre"] = "Liste Favoris";
+     ViewData["titre"] = @Locals["Title"];
+
 }
 <section id="list_favourite" class="container ">
-    <h1 class="title_favourite">LISTE DES FAVORIS</h1>
-    <p class="nombre_favoris">Vous avez <span class="fw-bold">@Model.Count films</span> en favoris</p>
+    <h1 class="title_favourite"> @Locals["Title"]</h1>
+    <p class="nombre_favoris"> @Locals["Desc1"] <span class="fw-bold">@Model.Count </span>  @Locals["Desc2"]</p>
     <table class="table details_table">
         <thead>
             <tr>
-                <th scope="col">Images</th>
-                <th scope="col">Nom de fim</th>
+                <th scope="col"> @Locals["Image"]</th>
+                <th scope="col"> @Locals["NameMovie"]</th>
                 <th scope="col">Statut</th>
-                <th scope="col">Supprimer </th>
+                <th scope="col"> @Locals["Delete"] </th>
             </tr>
         </thead>
         <tbody>
@@ -34,7 +35,7 @@
 
                             <form asp-controller="Favoris" asp-action="SuprrimeUnEnfant" method="POST">
                                 <input type="hidden" name="id" value="@item.Id" />
-                                <button class="button_ajout text-black" type="submit"> <i class="fa-sharp fa-solid fa-heart"></i>Supprimer en favoris</button>
+                            <button class="button_ajout text-black" type="submit"> <i class="fa-sharp fa-solid fa-heart"></i>@Locals["Delete"]</button>
                             </form>
                           
                     </td>
@@ -43,6 +44,9 @@
             }
         </tbody>
     </table>
+    <div class="col-5">
+        <a class="btn btn-secondary " asp-action="Index"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;@Locals["BackToList"]</a>
+    </div>
 </section>
 
 @*<div class="modal js-modal">

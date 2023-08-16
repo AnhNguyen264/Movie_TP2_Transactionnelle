@@ -1,10 +1,11 @@
 ﻿
 @model EnfantVM
 @{
-    ViewData["Title"] = "Create";
+    ViewData["titre"] = @Locals["Title"];
+
 }
-<h1>Créer un film</h1>
-<h4>Film</h4>
+<h1>@Locals["Title"]</h1>
+<h4>@Locals["Movie"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-12">

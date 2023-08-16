@@ -1,8 +1,9 @@
 ﻿@model Enfant
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["titre"] = @Locals["Title"];
+
 }
-<h1>Delete</h1>
+<h1>@Locals["Title"] @Model.Nom</h1>
 <h4>Zombie</h4>
 <hr />
 <div class="row">
@@ -57,10 +58,10 @@
                 <div class="row form-group">
                     <div class="col-4"> </div>
                     <div class="col-4">
-                        <button type="submit" value="Delete" class="btn btn-danger w-100"><i class="fa-solid fa-trash-can"></i>&nbsp;&nbsp;Supprimer</button>
+                        <button type="submit" value="Delete" class="btn btn-danger w-100"><i class="fa-solid fa-trash-can"></i>&nbsp;&nbsp;@Locals["Delete"]</button>
                     </div>
                     <div class="col-4">
-                        <a class="btn btn-secondary w-100" asp-controller="Enfant" asp-action="Recherche"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Retour à la liste</a>
+                        <a class="btn btn-secondary" asp-controller="Enfant" asp-action="Recherche"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;@Locals["BackToList"]</a>
                     </div>
                 </div>
             </form>

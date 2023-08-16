@@ -1,8 +1,10 @@
 ﻿@model Parent
 @{
-    //ViewData["Title"] = "Create";
+
+    ViewData["titre"] = @Locals["Create"];
+
 }
-<h1>Créer un nouveau statut</h1>
+<h1>@Locals["Title"]</h1>
 <h4>Statut</h4>
 <hr />
 <div class="row">
@@ -46,12 +48,12 @@
                     <div class="col-10 offset-4 row">
                         <div class="col-5">
 
-                            <button type="submit" class="btn btn-success w-100" value="Create"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;Créer</button>
+                            <button type="submit" class="btn btn-success w-100" value="Create"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;@Locals["Create"]</button>
 
 
                         </div>
                         <div class="col-5">
-                            <a asp-action="Index" class="btn btn-secondary w-100"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Retour à la liste</a>
+                            <a asp-action="Index" class="btn btn-secondary "><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;@Locals["BackToList"]</a>
                         </div>
                     </div>
                 </div>

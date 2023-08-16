@@ -364,6 +364,7 @@ footer::before {
 .footer_copyright {
     padding-top: 20px;
     position: relative;
+    margin-bottom: 16px;
 }
 
 

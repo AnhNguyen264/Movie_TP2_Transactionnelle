@@ -1,11 +1,12 @@
 ﻿@model ParentVM
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = @Locals["Title"];
+
 }
 
 <h1 style="padding-top:40px">Statut: @Model.parent.Nom</h1>
-<h3 style="padding-bottom:30px">Nombre de films: @Model.EnfantCount</h3>
+<h3 style="padding-bottom:30px">@Locals["NbMovie"]: @Model.EnfantCount</h3>
 
 <div class="row">
     @*  POUR CHAQUE ZOMBIE:*@
@@ -17,8 +18,8 @@
 @* SI AUCUN ZOMBIE ASSOCIÉ*@
 @if (Model.EnfantList.Count == 0)
 {
-    <div class="alert alert-danger">Pas de film associé à ce statut</div>
+    <div class="alert alert-danger">@Locals["Alert"]</div>
 }
 <div>
-    <a class="btn btn-secondary" asp-action="Index">Retour à la liste</a>
+    <a class="btn btn-secondary" asp-action="Index">@Locals["BackToList"]</a>
 </div>
