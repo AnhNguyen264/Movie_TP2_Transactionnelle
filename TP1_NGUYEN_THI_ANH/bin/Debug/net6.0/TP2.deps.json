@@ -16,7 +16,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.18",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.18",
           "Microsoft.Extensions.Localization": "6.0.16",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.15"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.15",
+          "jQuery.Validation": "1.19.5",
+          "jQuery.Validation.Globalize": "1.1.0",
+          "zxcvbn-core": "7.0.92"
         },
         "runtime": {
           "TP2.dll": {}
@@ -50,6 +53,7 @@
           }
         }
       },
+      "cldrjs/0.4.1": {},
       "Humanizer/2.14.1": {
         "dependencies": {
           "Humanizer.Core.af": "2.14.1",
@@ -588,6 +592,23 @@
           "lib/net6.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
           }
+        }
+      },
+      "jQuery/1.4.4": {},
+      "jquery-globalize/1.0.0": {
+        "dependencies": {
+          "cldrjs": "0.4.1"
+        }
+      },
+      "jQuery.Validation/1.19.5": {
+        "dependencies": {
+          "jQuery": "1.4.4"
+        }
+      },
+      "jQuery.Validation.Globalize/1.1.0": {
+        "dependencies": {
+          "jQuery.Validation": "1.19.5",
+          "jquery-globalize": "1.0.0"
         }
       },
       "Localization.AspNetCore.TagHelpers/0.6.0": {
@@ -2974,6 +2995,14 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "zxcvbn-core/7.0.92": {
+        "runtime": {
+          "lib/netstandard2.0/zxcvbn-core.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.92.0"
+          }
+        }
       }
     }
   },
@@ -2989,6 +3018,13 @@
       "sha512": "sha512-zanbjWC0Y05gbx4eGXkzVycOQqVOFVeCjVsDSyuao9P4mtN1w3WxxTo193NGC7j3o2u3AJRswaoC6hEbnGACnQ==",
       "path": "castle.core/4.4.1",
       "hashPath": "castle.core.4.4.1.nupkg.sha512"
+    },
+    "cldrjs/0.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WQ5Ey4MYeDjzFMSmaB6zDhxcjn+DN2zB2ahYemOZiQ1WhrMI8mXz/ssv3difmF545sOSmrliHOzRmjst6+Kd8Q==",
+      "path": "cldrjs/0.4.1",
+      "hashPath": "cldrjs.0.4.1.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",
@@ -3339,6 +3375,34 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
+    },
+    "jQuery/1.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kexCeYIZehR5fRjo8CK1sngN5SZEQRFNfCYZHMS1RxwEEiSKetBw/gliYJcLJdJEBB+e9aHqleLCjuaSI7u23g==",
+      "path": "jquery/1.4.4",
+      "hashPath": "jquery.1.4.4.nupkg.sha512"
+    },
+    "jquery-globalize/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lQMu3s31x6fy6uC/sSOnjl1FPbHkhhswKvGuvXMChEWImC+CKAQZ9YscMnNn94T9w4KHXoG9NSipXlgFbgBXYg==",
+      "path": "jquery-globalize/1.0.0",
+      "hashPath": "jquery-globalize.1.0.0.nupkg.sha512"
+    },
+    "jQuery.Validation/1.19.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lBHoaszLpKYxiVCWwIoxdqSCrlqnW9jeVMinMQ0uNMFcl3rmY8XyeaerfGLRbkVRUzh/fM3APaKepEezrR5AcA==",
+      "path": "jquery.validation/1.19.5",
+      "hashPath": "jquery.validation.1.19.5.nupkg.sha512"
+    },
+    "jQuery.Validation.Globalize/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qzka221RX45z642DOhlxGg/wvW4w8Md2Q02deZ0j6EfgyQEnXdLAeHw5xMK9EuFCjWoRbmISt/oFsJAvKqnmCA==",
+      "path": "jquery.validation.globalize/1.1.0",
+      "hashPath": "jquery.validation.globalize.1.1.0.nupkg.sha512"
     },
     "Localization.AspNetCore.TagHelpers/0.6.0": {
       "type": "package",
@@ -4886,6 +4950,13 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "zxcvbn-core/7.0.92": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3CKGKJe4SnFrks38EuF4iq1DT6IqsyNu/zMQp9GOpaipb7qdZndjjTXQa1/dkNh/OoxD0/aTcIBrRrbD4ALeGQ==",
+      "path": "zxcvbn-core/7.0.92",
+      "hashPath": "zxcvbn-core.7.0.92.nupkg.sha512"
     }
   }
 }

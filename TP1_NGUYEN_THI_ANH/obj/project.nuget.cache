@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LHisbXOw96g+MlEyHGKf3ulmkWF1HdEY5oRQzlpvqIrLSBVnvNiaclWmCxcaqCLsVV8tlWBgn0QXGViFKaUGJg==",
+  "dgSpecHash": "VQgOgBfGZ/rVdKS6h5mn1hn1w+6aJDfBiJBiD8MIferKr+HMGjfvBhn4kMlYJcw6HiL0v7O5twAWYOTT/GfyAg==",
   "success": true,
   "projectFilePath": "C:\\Ete 2023\\Prg transactionnelle\\New folder\\Movie_TP2_Transactionnelle\\TP1_NGUYEN_THI_ANH\\TP2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aniee\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
+    "C:\\Users\\aniee\\.nuget\\packages\\cldrjs\\0.4.1\\cldrjs.0.4.1.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -55,6 +56,10 @@
     "C:\\Users\\aniee\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\aniee\\.nuget\\packages\\jquery\\1.4.4\\jquery.1.4.4.nupkg.sha512",
+    "C:\\Users\\aniee\\.nuget\\packages\\jquery-globalize\\1.0.0\\jquery-globalize.1.0.0.nupkg.sha512",
+    "C:\\Users\\aniee\\.nuget\\packages\\jquery.validation\\1.19.5\\jquery.validation.1.19.5.nupkg.sha512",
+    "C:\\Users\\aniee\\.nuget\\packages\\jquery.validation.globalize\\1.1.0\\jquery.validation.globalize.1.1.0.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\localization.aspnetcore.taghelpers\\0.6.0\\localization.aspnetcore.taghelpers.0.6.0.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
@@ -275,7 +280,8 @@
     "C:\\Users\\aniee\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\aniee\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\aniee\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\aniee\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\aniee\\.nuget\\packages\\zxcvbn-core\\7.0.92\\zxcvbn-core.7.0.92.nupkg.sha512"
   ],
   "logs": []
 }

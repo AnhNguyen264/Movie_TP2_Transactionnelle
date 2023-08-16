@@ -84,6 +84,18 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.15, )"
+            },
+            "jQuery.Validation": {
+              "target": "Package",
+              "version": "[1.19.5, )"
+            },
+            "jQuery.Validation.Globalize": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "zxcvbn-core": {
+              "target": "Package",
+              "version": "[7.0.92, )"
             }
           },
           "imports": [

@@ -9,7 +9,9 @@ using TP2.Models.Data;
 
 var builder = WebApplication.CreateBuilder(args); // Crée une web app avec les paramètres envoyés
 
-
+IConfiguration configuration = builder.Configuration;
+var services = builder.Services;
+services.AddControllersWithViews();
 // Injecter la localisation ICI
 #region Localizer configuration
 CultureInfo[] supportedCultures = new[]

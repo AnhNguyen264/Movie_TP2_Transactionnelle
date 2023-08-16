@@ -19,7 +19,7 @@ namespace TP2.Controllers
             _baseDonnees = baseDonnees;
         }
         // GET: ParentsControllers
-        public async Task<  IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
             List<Parent> parentsList = await _baseDonnees.Parents.ToListAsync();
 

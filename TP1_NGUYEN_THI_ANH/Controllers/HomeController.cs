@@ -15,7 +15,7 @@ namespace TP2.Controllers
 
         private readonly IStringLocalizer<HomeController> _localizer;
 
-        public HomeController(BaseDonnees baseDonnees, IStringLocalizer<HomeController> localizer)
+        public HomeController(BaseDonnees baseDonnees/*,ILogger<HomeController> logger*/, IStringLocalizer<HomeController> localizer)
         {
             _baseDonnees = baseDonnees;
             //_logger = logger;
