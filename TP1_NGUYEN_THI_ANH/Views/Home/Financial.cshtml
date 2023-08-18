@@ -1,0 +1,281 @@
+﻿@section style {
+    @{
+        await Html.RenderPartialAsync("_style_dashboard");
+    }
+    <style>
+
+    </style>
+}
+
+<div class="main_body">
+    <div class="row">
+        <div class="col-2">
+
+            <aside class="sidebar">
+                <div class="sidebar-title">
+                    <div class="sidebar-brand">
+                        Rapport - Admin
+                    </div>
+
+                </div>
+
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-item ">
+                        <a href="#" target="_blank">
+                            Tableau de bord
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#" target="_blank">
+                            Les chefs d'équipe
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#" target="_blank">
+                            Les vendeurs
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="/financier.html" target="_blank">
+                            Rapports
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#" target="_blank">
+                            Couts
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#" target="_blank">
+                            Ventes
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#" target="_blank">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Retour à l'acceuil
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
+        <div class="col-10">
+            <div class="header">
+
+                <div class="header-left">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="header-right">
+                    <i class="fa-solid fa-bell"></i>
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+            <div class="">
+                <h2>
+                </h2>
+            </div>
+            <div class="main-financer">
+                <h2>Rapports de financiers</h2>
+                <div class="box shadow mt-4">
+                    <div id="line-adwords" class=""></div>
+                </div>
+            </div>
+
+            <div class="table-sta">
+
+                <table style="width:100%">
+                    <tr class="month">
+                        <th></th>
+
+                        <th colspan="2">Janvier</th>
+                        <th colspan="2">Février</th>
+                        <th colspan="2">Mars</th>
+                        <th colspan="2">Avril</th>
+                        <th colspan="2">Mai</th>
+                        <th colspan="2">Juin</th>
+                    </tr>
+                    <tr class="forecast-real">
+                        <td></td>
+
+                        <td>Forecast</td>
+                        <td>Réel</td>
+                        <td>Forecast</td>
+                        <td>Réel</td>
+                        <td>Forecast</td>
+                        <td>Réel</td>
+                        <td>Forecast</td>
+                        <td>Réel</td>
+                        <td>Forecast</td>
+                        <td>Réel</td>
+                        <td>Forecast</td>
+                        <td>Réel</td>
+                    </tr>
+                    <tr>
+                        <td class="text-bold">Ventes</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-normal">Coûts des produs vendus</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-normal"> Marge brute</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-bold">Frais d'exploitation</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-normal">Frais de R&D</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-normal">Frais de ventes</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-normal">Frais généraux et d'administration</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-bold">Total des frais d'exploitation</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-bold">Bénéfice</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-normal">Bénéfice avant impôts</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-normal">Impôts sur le revenu</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-bold">Bénéfice Net</td>
+
+                    </tr>
+
+
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+ 
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_script_dashboard");
+    }
+    <script>
+        //financier
+        window.Apex = {
+            chart: {
+                foreColor: '#ccc',
+                toolbar: {
+                    show: false
+                },
+            },
+            stroke: {
+                width: 3
+            },
+            dataLabels: {
+                enabled: false
+            },
+            tooltip: {
+                theme: 'dark'
+            },
+            grid: {
+                borderColor: "#535A6C",
+                xaxis: {
+                    lines: {
+                        show: true
+                    }
+                }
+            }
+        };
+
+        var optionsLine = {
+            chart: {
+                height: 328,
+                type: 'line',
+                zoom: {
+                    enabled: false
+                },
+                dropShadow: {
+                    enabled: true,
+                    top: 3,
+                    left: 2,
+                    blur: 4,
+                    opacity: 1,
+                }
+            },
+            stroke: {
+                curve: 'smooth',
+                width: 2
+            },
+
+            series: [{
+                name: "Forecast",
+                data: [26000, 35000, 33000, 27000, 35000, 28000]
+            },
+
+            {
+                name: "Réel",
+                data: [25000, 30000, 40000, 25000, 37000, 33000]
+            }
+            ],
+            title: {
+                text: 'Rapport de dépenses pour les six premiers mois de 2023',
+                align: 'left',
+                offsetY: 25,
+                offsetX: 20
+            },
+            subtitle: {
+                text: 'Forecast - Réel',
+                offsetY: 55,
+                offsetX: 20
+            },
+            markers: {
+                size: 6,
+                strokeWidth: 0,
+                hover: {
+                    size: 9
+                }
+            },
+            grid: {
+                show: true,
+                padding: {
+                    bottom: 0
+                }
+            },
+            labels: ['Janvier', 'Févirer', 'Mars', 'Avril', 'Mai', 'Juin'],
+            xaxis: {
+                tooltip: {
+                    enabled: false
+                }
+            },
+            legend: {
+                position: 'top',
+                horizontalAlign: 'right',
+                offsetY: -20
+            }
+        }
+
+        var chartLine = new ApexCharts(document.querySelector('#line-adwords'), optionsLine);
+        chartLine.render();
+
+
+    </script>
+}

@@ -1,0 +1,73 @@
+@keyframes arrowDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+  @media screen and (max-width: 992px) {
+    #sidebar
+
+{
+  display: none;
+}
+
+.menu-icon {
+  display: inline;
+}
+
+.sidebar-title > span {
+  display: inline;
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .main-cards {
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-cards {
+    display: block;
+    width: 100%;
+  }
+
+  .card {
+    display: block;
+    width: 80%;
+  }
+
+  .charts {
+    display: block;
+  }
+
+  @keyframes arrowDownChef {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+  }
+
+}

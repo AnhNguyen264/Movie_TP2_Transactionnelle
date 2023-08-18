@@ -1,0 +1,377 @@
+﻿
+@section style {
+    @{
+        await Html.RenderPartialAsync("_style_dashboard");
+    }
+    <style>
+
+    </style>
+}
+    <div class="main_body">
+        <div class="row">
+            <div class="col-2">
+
+                <aside class="sidebar">
+                    <div class="sidebar-title">
+                        <div class="sidebar-brand">
+                            Rapport
+                        </div>
+
+                    </div>
+
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-item">
+                        <a asp-controller="home" asp-action="Dashboard"  target="_blank">
+                            Tableau de bord
+                        </a>
+                        </li>
+                    <li class="sidebar-list-item">
+                        <a asp-controller="home" asp-action="Financial" target="_blank">
+                            Rapports
+                        </a>
+                    </li>
+                        <li class="sidebar-list-item">
+                        <a asp-controller="home" asp-action="LeaderObjective" target="_blank">
+                            Les chefs d'équipe
+                            </a>
+                        </li>
+                        <li class="sidebar-list-item">
+                        <a asp-controller="home" asp-action="Employes" target="_blank">
+                            Les vendeurs
+                        </a>
+                        </li>
+                       
+                        <li class="sidebar-list-item">
+                            <a href="#" target="_blank">
+                                Couts
+                            </a>
+                        </li>
+                        <li class="sidebar-list-item">
+                            <a href="#" target="_blank">
+                                Ventes
+                            </a>
+                        </li>
+                        <li class="sidebar-list-item">
+                        <a asp-controller="home" asp-action="index" target="_blank">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Retour à l'acceuil
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="col-10">
+                <div class="header">
+
+                    <div class="header-left">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="header-right">
+                        <i class="fa-solid fa-bell"></i>
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+
+
+                <div class="main_content">
+
+                <div class="main-title">
+                    <h2 class="font-weight-bold">Tableau de bord</h2>
+                </div>
+                    <div class="trend">
+                        <h3>films les plus vendus</h3>
+
+         
+
+
+                        <div class="image-slider">
+                            <div class="image-item">
+                                <div class="image">
+                                    <img src="~/Image/1.jpeg"
+                                         alt="" />
+                                </div>
+                                <h5 class="image-title">Nom de film</h5>
+                            </div>
+                            <div class="image-item">
+                                <div class="image">
+                                    <img src="~/Image/2.jpeg"
+                                         alt="" />
+                                </div>
+                                <h5 class="image-title">Nom de film</h5>
+                            </div>
+                            <div class="image-item">
+                                <div class="image">
+                                    <img src="~/Image/3.jpeg"
+                                         alt="" />
+                                </div>
+                                <h5 class="image-title">Nom de film</h5>
+                            </div>
+                            <div class="image-item">
+                                <div class="image">
+                                    <img src="~/Image/4.jpeg"
+                                         alt="" />
+                                </div>
+                                <h5 class="image-title">Nom de film</h5>
+                            </div>
+                            <div class="image-item">
+                                <div class="image">
+                                    <img src="~/Image/5.jpeg"
+                                         alt="" />
+                                </div>
+                                <h5 class="image-title">Nom de film</h5>
+                            </div>
+
+                        </div>
+
+                        <div class="arrow-down">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="main-cards row">
+
+                        <div class="card col-2">
+                            <div class="card-inner">
+                                <p class="text-primary">Nombre des films</p>
+                                <span class=" text-blue"></span>
+                            </div>
+                            <div class="number_stati">
+
+                                <span class="numero text-primary font-weight-bold" data-val="249">
+                                    000
+                                </span>
+                                <span>Films</span>
+                            </div>
+                        </div>
+
+                        <div class="card col-2">
+                            <div class="card-inner">
+                                <p class="text-primary">Revenus</p>
+                                <span class=" text-orange"></span>
+                            </div>
+                            <div class="number_stati">
+                                <span>+</span>
+                                <span class="numero text-primary font-weight-bold" data-val="56"> 000 </span>
+                                <span>000$</span>
+                            </div>
+
+                        </div>
+
+                        <div class="card col-2">
+                            <div class="card-inner">
+                                <p class="text-primary">Coûts</p>
+                                <span class=" text-green"></span>
+                            </div>
+
+                            <div class="number_stati">
+                                <span>+</span>
+                                <span class="numero text-primary font-weight-bold" data-val="38">000</span>
+
+                                <span>000$</span>
+                            </div>
+                        </div>
+
+                        <div class="card col-2">
+                            <div class="card-inner">
+                                <p class="text-primary">Ventes</p>
+                                <span class=" text-red"></span>
+                            </div>
+                            <div class="number_stati">
+
+                                <span class="numero text-primary font-weight-bold" data-val="150">000 </span>
+                                <span>Films</span>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="charts row">
+
+                        <div class="charts-card col-5">
+                            <p class="chart-title">Total ventes en Q1 de 2023</p>
+                            <div id="bar-chart"></div>
+                        </div>
+
+                        <div class="charts-card col-5">
+                            <p class="chart-title">Coûts et revenus </p>
+                            <div id="area-chart"></div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+                
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_script_dashboard");
+    }
+
+    @*<partial name ="_ValidationScriptsPartial"   />*@
+    <script>
+        $(document).ready(function () {
+            $('.image-slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: false,
+                draggable: true,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                        },
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1,
+                            arrows: false,
+                            infinite: false,
+                        },
+                    },
+                ],
+                autoplay: true,
+                autoplaySpeed: 1000,
+            });
+        });
+    </script>
+
+
+    <script>
+        let nums = document.querySelectorAll(".numero");
+        let intervalNum = 5000;
+
+        nums.forEach((num) => {
+            let startNum = 0;
+            let endNum = parseInt(num.getAttribute("data-val"));
+            console.log(endNum);
+            let durationFunction = Math.floor(intervalNum / endNum);
+            let counterNum = setInterval(function () {
+                startNum += 1;
+                num.textContent = startNum;
+
+                if (startNum == endNum) {
+                    clearInterval(counterNum);
+                }
+            }, durationFunction);
+
+        });
+    </script>
+
+
+
+    <script>
+        var barChartOptions = {
+            series: [{
+                data: [100, 150, 70, 90]
+            }],
+            chart: {
+                type: 'bar',
+                height: 350,
+                toolbar: {
+                    show: false
+                },
+            },
+            colors: [
+                "#246dec",
+                "#cc3c43",
+                "#367952",
+                "#f5b74f",
+                "#4f35a1"
+            ],
+            plotOptions: {
+                bar: {
+                    distributed: true,
+                    borderRadius: 4,
+                    horizontal: false,
+                    columnWidth: '40%',
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            legend: {
+                show: false
+            },
+            xaxis: {
+                categories: ["Janvier", "Février", "Mars", "Avril"],
+            },
+            yaxis: {
+                title: {
+                    text: "Nombre des films"
+                }
+            }
+        };
+
+        var barChart = new ApexCharts(document.querySelector("#bar-chart"), barChartOptions);
+        barChart.render();
+
+
+        var areaChartOptions = {
+            series: [{
+                name: 'Coûts',
+                data: [25468, 30794, 27647, 15487]
+            }, {
+                name: 'Revenus',
+                data: [45167, 56497, 35797, 48167]
+            }],
+            chart: {
+                height: 350,
+                type: 'area',
+                toolbar: {
+                    show: false,
+                },
+            },
+            colors: ["#4f35a1", "#246dec"],
+            dataLabels: {
+                enabled: false,
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            labels: ["Janvier", "Février", "Mars", "Avril"],
+            markers: {
+                size: 0
+            },
+            yaxis: [
+                {
+                    title: {
+                        text: 'Coûts',
+                    },
+                },
+                {
+                    opposite: true,
+                    title: {
+                        text: 'Revenus',
+                    },
+                },
+            ],
+            tooltip: {
+                shared: true,
+                intersect: false,
+            }
+        };
+
+        var areaChart = new ApexCharts(document.querySelector("#area-chart"), areaChartOptions);
+        areaChart.render();
+
+    </script>
+ }
